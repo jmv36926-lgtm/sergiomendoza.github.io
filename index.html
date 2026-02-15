@@ -1,177 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AgroMendoza - Productos Agroquímicos</title>
-
-<style>
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-}
-
-header {
-    background: linear-gradient(90deg, #1b5e20, #2e7d32);
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-nav {
-    background: #145a18;
-    padding: 15px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-}
-
-nav a {
-    color: white;
-    margin: 15px;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.producto {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.producto:hover {
-    transform: scale(1.02);
-}
-
-button {
-    background: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background: #388e3c;
-}
-
-footer {
-    background: #1b5e20;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Mi Tienda</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-<h1>AgroMendoza</h1>
-<p>Soluciones técnicas en agroquímicos para maximizar tu producción</p>
-<button onclick="scrollToSection('productos')">Ver Productos</button>
+    <h1>Mi Tienda</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+    </nav>
 </header>
 
-<nav>
-<a onclick="scrollToSection('inicio')">Inicio</a>
-<a onclick="scrollToSection('productos')">Productos</a>
-<a onclick="scrollToSection('asesoria')">Asesoría</a>
-<a onclick="scrollToSection('contacto')">Contacto</a>
-</nav>
-
-<section id="inicio">
-<h2>Bienvenido</h2>
-<p>Somos especialistas en soluciones agrícolas. Ofrecemos productos de calidad y asesoría técnica personalizada para mejorar el rendimiento de tus cultivos.</p>
+<section class="hero">
+    <h2>Bienvenido a mi tienda</h2>
+    <p>Descubre nuestros productos increíbles</p>
+    <a class="btn" href="productos.html">Ver Productos</a>
 </section>
-
-<section id="productos">
-<h2>Nuestros Productos</h2>
-
-<div class="producto">
-<h3>Herbicida Selectivo</h3>
-<p>Control efectivo de malezas en maíz y arroz.</p>
-<button onclick="enviarWhatsApp('Herbicida Selectivo')">Consultar</button>
-</div>
-
-<div class="producto">
-<h3>Insecticida Sistémico</h3>
-<p>Protección prolongada contra plagas.</p>
-<button onclick="enviarWhatsApp('Insecticida Sistémico')">Consultar</button>
-</div>
-
-<div class="producto">
-<h3>Fungicida Preventivo</h3>
-<p>Prevención y control de enfermedades fúngicas.</p>
-<button onclick="enviarWhatsApp('Fungicida Preventivo')">Consultar</button>
-</div>
-
-</section>
-
-<section id="asesoria">
-<h2>Asesoría Técnica</h2>
-<p>Brindamos recomendaciones de aplicación, manejo integrado de plagas y optimización de dosis para cada cultivo.</p>
-</section>
-
-<section id="contacto">
-<h2>Contacto</h2>
-<p>📍 Perú</p>
-<p>📱 WhatsApp: 983390392</p>
-<button onclick="enviarWhatsApp('Consulta general')">Escríbenos</button>
-</section>
-
-<footer>
-<p>© 2026 AgroMendoza - Todos los derechos reservados</p>
-</footer>
-
-<a class="whatsapp-float" 
-href="https://wa.me/51987654321" 
-target="_blank">💬</a>
-
-<script>
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView();
-}
-
-function enviarWhatsApp(producto) {
-    let numero = "51983390392"; // CAMBIA POR TU NÚMERO REAL
-    let mensaje = "Hola, estoy interesado en: " + producto;
-    let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
-    window.open(url, "_blank");
-}
-</script>
 
 </body>
 </html>
